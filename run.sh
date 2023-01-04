@@ -104,12 +104,6 @@ IFS=$OLDIFS
 printf "\nBuilding Vercel Project for environment %s \n" "${VERCEL_ENV}"
 
 vercel pull -t "${PLUGIN_VERCEL_TOKEN}" --environment="${VERCEL_ENV}"
-if [ "${VERCEL_ENV}" == "production" ];
-then
-  vercel build --prod
-else
-  vercel build
-fi
 
 printf "\n"
 

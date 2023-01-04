@@ -25,7 +25,7 @@ printf "\nUsing directory '%s' as site directory\n" "${PLUGIN_VERCEL_SITE_DIR}"
 
 cd "${PLUGIN_VERCEL_SITE_DIR}"
 
-VERCEL_COMMAND+=("vercel" "deploy" "--prebuilt" "-t" "${PLUGIN_VERCEL_TOKEN}")
+VERCEL_COMMAND+=("vercel" "deploy" "-t" "${PLUGIN_VERCEL_TOKEN}")
 
 if [ "${VERCEL_ENV}" == "production" ];
 then

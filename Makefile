@@ -1,4 +1,4 @@
-IMAGE?=kameshsampath/drone-vercel-deploy
+IMAGE?=hub.hyperting.com/drone-vercel-deploy
 TAG?=latest
 SHELL := bash
 CURRENT_DIR = $(shell pwd)

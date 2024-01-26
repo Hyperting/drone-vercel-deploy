@@ -34,7 +34,7 @@ platform:
   arch: amd64
 steps:
 - name: deploy
-  image: docker.io/kameshsampath/drone-vercel-deploy
+  image: hub.hyperting.it/drone-vercel-deploy
   pull: never
   settings:
     log_level: debug
@@ -57,13 +57,7 @@ steps:
 Run the following command to build and push the image manually
 
 ```shell
-make build-and-load
-```
-
-To build and push the image use,
-
-```shell
-make build-and-push
+ docker buildx build --platform linux/amd64 -t drone-vercel-deploy -f docker/Dockerfile .
 ```
 
 ## Testing
